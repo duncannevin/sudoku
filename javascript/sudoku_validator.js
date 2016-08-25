@@ -2,16 +2,13 @@ var validSolution = function(board){
 	//Checks a row to see if it contains 1 through 9...
 	var checkRow = function(rows){
 		//Using reduce in order to check if all the numbers are in sequential order...
-		return rows.reduce((memo, currVal, index, array)=>{
+		return _.reduce(rows ,(memo, currVal, index, array)=>{
 			//sort the row..
 			currVal.sort();
 			//Check numbers, if current value does not equal next val+1 change memo to false...
-			
-			for(var i = 0; i<currVal.length; i++){
-				if(currVal[i] !== (i+1)){
-					memo = false;
-				}
-			}
+			_.each(currVal, (val, index, array)=>{
+				if(val !== index+1){memo = false};
+			});
 			return memo;
 		}, true);
 	};
@@ -21,11 +18,10 @@ var validSolution = function(board){
 		//just create them now for a faster algorithm...
 		var newArrays = [[], [], [], [], [], [], [], [], []];
 		//push the values to newarray in the correct order...
-		rows.slice().forEach((val, index, array)=>{
-			//use a for loop for easy counting...
-			for(var i = 0; i<val.length; i++){
-				newArrays[i].push(val[i]);
-			}
+		_.each(rows.slice(), (val, index, array)=>{
+			_.each(val, (val2, index2, array2)=>{
+				newArrays[index2].push(val[index2]);
+			});
 		});
 		return checkRow(newArrays);
 	};
