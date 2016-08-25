@@ -6,6 +6,7 @@ var validSolution = function(board){
 			//sort the row..
 			currVal.sort();
 			//Check numbers, if current value does not equal next val+1 change memo to false...
+			
 			for(var i = 0; i<currVal.length; i++){
 				if(currVal[i] !== (i+1)){
 					memo = false;
