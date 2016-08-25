@@ -40,19 +40,9 @@ var validSolution = function(board){
 		};
 		//Break down the original array and call the pushFunction to creat
 		//new array...
-		for(var i = 0; i<newArrays.length; i++){
-			if(i <= 2){
-				pushFunction(0, 3, 0);
-				pushFunction(3, 6, 1);
-				pushFunction(6, 9, 2);
-			}else if(i <= 5){
-				pushFunction(0, 3, 3);
-				pushFunction(3, 6, 4);
-				pushFunction(6, 9, 5);
-			}else{
-				pushFunction(0, 3, 6);
-				pushFunction(3, 6, 7);
-				pushFunction(6, 9, 8);
+		for(var i = 0; i < 9; i++){
+			for(var j = 0; j <= 6; j+=3){
+				pushFunction( j, j+3, i);
 			}
 		}
 		//call checkRow to see if we have the correct numbers...
