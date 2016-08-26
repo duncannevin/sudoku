@@ -1,0 +1,33 @@
+*{
+
+}
+html{
+	height: 100%;
+}
+body, .wrapper, .gameArea{
+	height: 100%;
+}
+.bodySections1, .bodySections2, .bodySections3{
+	width: 100%;
+}
+.bodySections1, .bodySections3{
+	height: 25%;
+}
+.bodySections2{
+	padding: 30px;
+	height: 50%;
+}
+.gameBoard{border: 1px solid green;
+	display: table;
+	margin: 0 auto;
+	height: 30em;
+	width: 30em;
+}
+.row{
+	display: table-row;
+	height: 11%;
+}
+.square{border: 1px solid black;
+	display: table-cell;
+	width: 11%;
+}
