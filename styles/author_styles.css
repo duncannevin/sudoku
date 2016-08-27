@@ -17,7 +17,7 @@ body, .wrapper, .gameArea{
 	padding: 30px;
 	height: 50%;
 }
-.gameBoard{border: 1px solid green;
+.gameBoard{
 	display: table;
 	margin: 0 auto;
 	height: 30em;
