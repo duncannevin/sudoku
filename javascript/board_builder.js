@@ -1,8 +1,13 @@
 //Wrap the board assembly in a function so it can be used in any format in the DOM...
 var assembleBoard = function(){
+	//Write a function that makes a random board pattern, then checks it
+	//to see if it is a valid pattern, if it is this will be the pattern 
+	//for this game...
+	
+
+
 	//Write a function that creates the original boards layout based on a winning combonation, should also include
 	//all the form elements for input...
-
 	var createBoardPattern = function(){
 		//Create a variable with a winning board in order to populate the template
 		var winningBoard = [[5, 3, 4, 6, 7, 8, 9, 1, 2], 
@@ -46,10 +51,10 @@ var assembleBoard = function(){
 			for(var j = 1; j < 10; j++){				
 				$('.number' + i).append('<div class="square box'+ boxCounter +'">' + pattern[i-1][j-1] + '</div>');
 				if(i < 9 && i % 3 === 0){
-					$('.box' + boxCounter).css('border-bottom', '2px solid black');
+					$('.box' + boxCounter).css('border-bottom', '3px solid black');
 				}
 				if(j % 9 !== 0 && j % 3 === 0){
-					$('.box' + boxCounter).css('border-right', '2px solid black');
+					$('.box' + boxCounter).css('border-right', '3px solid black');
 				}
 				boxCounter++;
 			}
