@@ -35,7 +35,6 @@ var whatIsEntered = function(loc){
 //When a key is pressed get the location of the entry and the value, then uses closer with livegameboard to store the value...
 var getSelectionInfo = function(ind1, ind2){
 	var getTheDigit = Number(whatIsEntered(document.getElementById('dis' + ind1 + ind2 + '')));
-	console.log([ind1, ind2, getTheDigit]);
 	disBoard(ind1, ind2, getTheDigit);
 };
 //Load board on pageload...

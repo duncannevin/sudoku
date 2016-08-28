@@ -48,10 +48,8 @@ var validSolution = function(board){
 	};
 
 	if(createBoxRow(board) && createVertRow(board) && checkRow(board)){
-		console.log(true);
 		return true;
 	}else{
-		console.log(false);
 		return false;
 	}
 
