@@ -12,7 +12,10 @@ var liveGameBoard = function(){
 	
 	return function updateBoard(ind1, ind2, val){
 		board[ind1][ind2] = val;
-		validSolution(board);
+		//Returns a boolean...
+		if(validSolution(board)){
+			alert('Good job stud!');
+		}
 	};		 
 };
 var disBoard = liveGameBoard();

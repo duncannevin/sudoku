@@ -19,7 +19,7 @@ var assembleBoard = function(){
 		var newBoard = _.map(winningBoard, (sub, ind)=>{
 			//Create an array with 0 - 8 random numbers between 0 - 9 that will be the random indexes...
 			var indexes = [];
-			while(indexes.length < Math.floor(Math.random() * 9)){
+			while(indexes.length < 5){
 				var randomNum = Math.floor(Math.random() * 10);
 				if(!_.some(indexes, (curr)=>{return randomNum === curr})){
 					indexes.push(randomNum);
