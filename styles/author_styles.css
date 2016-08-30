@@ -1,5 +1,7 @@
 *{
 	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
 }
 html{
 	height: 100%;
@@ -22,17 +24,19 @@ body, .wrapper, .gameArea{
 	margin: 0 auto;
 	height: 30em;
 	width: 30em;
+	border-bottom: 1px solid black;
+	border-left: 1px solid black;
 }
 .row{
 	display: table-row;
 	height: 11%;
 }
-.square{border: 1px solid black;
+.square{
 	display: table-cell;
 	width: 11%;
-	text-align: center;
 }
 .userEntry{
+	border: none;
 	width: 100%;
 	height: 100%;
 	text-align: center;
