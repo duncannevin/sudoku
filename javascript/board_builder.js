@@ -50,9 +50,14 @@ var assembleBoard = function(){
 			$('.gameBoard').append('<div class="row number'+ i +'"></div>');
 			for(var j = 1; j < 10; j++){				
 				$('.number' + i).append('<div class="square box'+ boxCounter +'">' + pattern[i-1][j-1] + '</div>');
-				//
-				$('.box' + boxCounter).css('border-top', '1px solid black');
-				$('.box' + boxCounter).css('border-right', '1px solid black');
+				//puts border on inner boxes
+				if(i !== 1){
+					$('.box' + boxCounter).css('border-top', '1px solid black');
+				}
+				if(j !== 9){
+					$('.box' + boxCounter).css('border-right', '1px solid black');
+				}	
+				//adds thicker border around 3x3 sections	
 				if(i < 9 && i % 3 === 0){
 					$('.box' + boxCounter).css('border-bottom', '3px solid black');
 				}
