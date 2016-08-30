@@ -52,17 +52,17 @@ var assembleBoard = function(){
 				$('.number' + i).append('<div class="square box'+ boxCounter +'">' + pattern[i-1][j-1] + '</div>');
 				//puts border on inner boxes
 				if(i !== 1){
-					$('.box' + boxCounter).css('border-top', '1px solid black');
+					$('.box' + boxCounter).css('border-top', '1px solid rgb(123, 111, 111)');
 				}
 				if(j !== 9){
-					$('.box' + boxCounter).css('border-right', '1px solid black');
+					$('.box' + boxCounter).css('border-right', '1px solid rgb(123, 111, 111)');
 				}	
 				//adds thicker border around 3x3 sections	
 				if(i < 9 && i % 3 === 0){
-					$('.box' + boxCounter).css('border-bottom', '3px solid black');
+					$('.box' + boxCounter).css('border-bottom', '3px solid rgb(123, 111, 111)');
 				}
 				if(j % 9 !== 0 && j % 3 === 0){
-					$('.box' + boxCounter).css('border-right', '3px solid black');
+					$('.box' + boxCounter).css('border-right', '3px solid rgb(123, 111, 111)');
 				}
 				boxCounter++;
 			}
